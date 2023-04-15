@@ -1,0 +1,21 @@
+---
+#prime: https://github.com/rsu-client/rsu-client
+
+- name: if Distro version is Newer than repo
+  ansible.builtin.lineinfile:
+    path: "{{sources_file}}"
+    line: "{{sources_line}}"
+    create: yes
+  when: ansible_distribution_release != latest_available
+  become: true
+
+## Todo: Apt key! Does not work currently
+# 'E: The repository 'https://ppa.launchpadcontent.net/hikariknight/unix-runescape-client/ubuntu hirsute InRelease' is not signed.'
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_key_module.html
+
+- name: Install RSU-client
+  ansible.builtin.apt:
+    pkg:
+    - unix-runescape-client
+    update_cache: yes
+  become: true

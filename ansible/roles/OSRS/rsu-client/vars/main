@@ -1,0 +1,9 @@
+---
+
+latest_ubuntu: "kinetic"
+latest_available: "hirsute"
+
+repo_url: "https://ppa.launchpadcontent.net/hikariknight/unix-runescape-client/ubuntu/"
+
+sources_line: "deb {{repo_url}} {{latest_available}} main"
+sources_file: "/etc/apt/sources.list.d/hikariknight-ubuntu-unix-runescape-client-kinetic.list"

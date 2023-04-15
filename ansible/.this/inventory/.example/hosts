@@ -22,5 +22,5 @@ ansible_become_password=u
 
 
 [test:children]
-fedora
+; fedora
 ubuntu

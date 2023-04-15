@@ -1,7 +1,7 @@
 ---
-- hosts: local #, fedora, ubuntu
+- hosts: test #, local
   vars:
-    method: "snap"
+    method: "rsu-client" #"snap"
 
   roles:
-  - OSRS/snap
+  - OSRS
