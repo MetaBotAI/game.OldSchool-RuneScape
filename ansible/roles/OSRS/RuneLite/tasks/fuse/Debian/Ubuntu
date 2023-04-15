@@ -1,0 +1,7 @@
+---
+
+- name: Install FUSE
+  ansible.builtin.apt:
+    pkg:
+    - fuse
+  become: true

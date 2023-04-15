@@ -1,7 +1,7 @@
 ---
 - hosts: test #, local
   vars:
-    method: "rsu-client" #"snap"
+    # method: RuneLite #"snap"
 
   roles:
   - OSRS

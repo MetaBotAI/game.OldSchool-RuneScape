@@ -1,3 +1,9 @@
 ---
 
-download: https://github.com/runelite/launcher/releases/download/2.6.3/RuneLite.AppImage
+app_image: "RuneLite.AppImage"
+
+uni_path: ".uni/dream/metabotai/game"
+
+game_dir: "/home/{{ansible_user}}/{{uni_path}}/osrs"
+
+app_image_url: "https://github.com/runelite/launcher/releases/download/2.6.3/{{app_image}}"
