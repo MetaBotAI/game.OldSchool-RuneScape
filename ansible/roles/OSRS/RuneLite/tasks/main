@@ -14,3 +14,12 @@
     mode: '0755'
 
 - include_tasks: 'fuse/{{ ansible_os_family }}/{{ ansible_distribution }}'
+
+- name: Generate .desktop file
+  ansible.builtin.template:
+    src: runelite.desktop.j2
+    dest: /usr/share/applications/runelite.desktop
+    owner: root
+    group: root
+    mode: '0544'
+  become: true
