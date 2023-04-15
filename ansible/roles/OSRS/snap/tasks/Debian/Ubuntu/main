@@ -1,0 +1,6 @@
+---
+- name: Install foo
+  community.general.snap:
+    name:
+      - os-runes
+  become: true
